@@ -16,9 +16,6 @@ Note: If you have a link to an assignment that has not been marked, put "open" a
 
 <details open><summary>September 2025 Journal Entries</summary>
 
----
-
-
 ---      
 
 <details><summary>Tuesday Sept 16th, 2025</summary>
