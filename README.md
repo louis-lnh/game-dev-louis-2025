@@ -22,8 +22,8 @@ Note: If you have a link to an assignment that has not been marked, put "open" a
 
 ### Title
 1. Video Flac Test
+1. List and Tables Assignment (done everything except adv)
 1. 
-1.
 
 </details>
 
