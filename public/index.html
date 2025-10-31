@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8" />
+        <title>index.html</title>
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            html, body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                min-height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 20px;
+                position: relative;
+                overflow-x: hidden;
+            }
+            .background {
+                position: fixed;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                background-size: cover;
+                z-index: 1;
+            }
+            .overlay {
+                position: fixed;
+                width: 100%;
+                height: 100%;
+                backdrop-filter: blur(5px);
+                background: rgba(0, 0, 0, 0.3);
+                z-index: 2;
+            }
+            .menu {
+                display: block;
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 400px;
+                background: rgba(255, 255, 255, 0.1);
+                border: 2px solid rgba(255, 255, 255, 0.2);
+                border-radius: 15px;
+                box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+                padding: 30px;
+                text-align: center;
+                z-index: 3;
+                backdrop-filter: blur(10px);
+                max-height: 80vh;
+                overflow-y: auto;
+            }
+            .menu h1 {
+                font-size: 2em;
+                margin-bottom: 25px;
+                letter-spacing: 2px;
+            }
+            .menu button {
+                display: block;
+                width: 100%;
+                 margin: 10px 0;
+                padding: 12px;
+                background: rgba(255, 255, 255, 0.15);
+                border: none;
+                border-radius: 8px;
+                color: white;
+                font-size: 1.1em;
+                cursor: pointer;
+                transition: background 0.2s ease;
+                max-height: 80vh;
+                overflow-y: auto;
+            }
+            .menu button:hover {
+                background: rgba(255, 255, 255, 0.3);
+            }
+            .urlswdw h1, .markwdw h1, .listofallwdw h1, .listofxwdw h1, .normalindexwdw h1 {
+                text-align: center;
+            }
+
+            .urlswdw, .markwdw, .listofallwdw, .listofxwdw, .normalindexwdw {
+                display: none;
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: rgba(255, 255, 255, 0.1);
+                padding: 30px;
+                border-radius: 15px;
+                backdrop-filter: blur(10px);
+                min-width: 400px;
+                z-index: 4;
+                max-height: 80vh;
+                overflow-y: auto;
+            }
+            #urlswdwback, #markwdwback, #listofallwdwback, #listofxwdwback, #normalindexwdwback {
+                display: block;
+                margin: 20px auto 5px;
+                padding: 12px 30px;
+                font-size: 16px;
+                color: #fff;
+                background: rgba(102, 126, 234, 0.8);
+                border: 2px solid rgba(255, 255, 255, 0.3);
+                border-radius: 8px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+            #urlswdwback:hover, #markwdwback:hover, #listofallwdwback:hover, #listofxwdwback:hover, #normalindexwdwback:hover {
+                background: rgba(118, 75, 162, 0.9);
+                transform: translateY(-2px);
+            }
+            li {
+                text-align: center;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="background"></div>
+        <div class="overlay"></div>
+
+        <div class="menu">
+            <h1>index.html for Game Development by Louis</h1>
+            <button id="urls">Github URLS</button>
+            <button id="mark">Please Mark</button>
+            <button id="listofall">All Assignments</button>
+            <button id="listofx">X Assignments</button>
+            <button id="normalindex">Normal Index (if this is too much)</button>
+        </div>
+        <div class="urlswdw" id="urlswdw">
+            <h1>Github URLS</h1>
+            <li><a href="https://github.com/louis-lnh/game-dev-louis-2025">My GameDev Repository</a>
+            <li><a href="https://louis-lnh.github.io/game-dev-louis-2025/public">My GameDev Webpage</a>
+            <button id="urlswdwback">Back to index</button>
+        </div>
+        <div class="markwdw" id="markwdw">
+            <h1>Please Mark</h1>
+            <li><a href="t1a16-movediv-louis.html">t1a16-movediv-louis.html</a></li>
+            <li><a href="t1a15-classification-louis">t1a15-classification.html</a></li>
+            <li><a href="t1a13-classes-louis.html">t1a13-classes-louis.html</a></li>
+            <li><a href="t1a12-events-louis.html">t1a12-events-louis.html</a></li>
+            <li><a href="t1a11"></a></li>
+            <li><a href="t1a10">..</a></li>
+            <li><a href="t1a08">..</a></li>
+            <li><a href="t1a07">..</a></li>
+            <li><a href="t1a05">..</a></li>
+            <button id="markwdwback">Back to index</button>
+        </div>
+        <div class="listofallwdw" id="listofallwdw">
+            <h1>List of all my Assignments</h1>
+            <li><a href="t1a01-proper-web-page-louis.html">Assignment 1 Proper-Webpage</a>
+            <li><a href="t1a02-video-flac-louis.html">Assignment 2 Video-Flac</a>
+            <li><a href="t1a03-list-tables-louis.html">Assignment 3 List Tables</a>
+            <li><a href="t1a04-vibe-coding-cleaning-louis.html">Assignment 4 Vibe Coding</a>
+            <li><a href="..">05 (not done yet)</a>
+            <li><a href="t1a06-css-louis.html">Assignment 6 CSS</a>
+            <li><a href="..">07 (not done yet)</a>
+            <li><a href="t1a08-in-out-louis.html">t1a08-in-out-louis.html</a>
+            <li><a href="t1a09-variables-louis.html">t1a09-variables-louis.html</a>
+            <li><a href="t1a10-for-loops-louis.html">t1a10-for-loops-louis.html</a>
+            <li><a href="..">...</a>
+            <li><a href="..">...</a>
+            <li><a href="t1a13-extend-class-louis.html">t1a13-extend-class-louis.html</a>
+            <li><a href="..">..</a></li>
+            <li><a href="..">..</a></li>
+            <li><a href="..">..</a></li>
+            <button id="listofallwdwback">Back to index</button>
+        </div>
+        <div class="listofxwdw" id="listofxwdw">
+            <h1>My Bonus (X) Assignments</h1>
+            <li><a href="t1x-browser-hack">Bonus Assignment Browser-Hack</a>
+            <button id="listofxwdwback">Back to index</button>
+        </div>
+        <div class="normalindexwdw" id="normalindexwdw">
+            <h1>If the work of the Index was stupid and I would get a minus grade for this, please just use the normal index instead and forget this here :)</h1>
+            <li><a href="..">Url to Normal Index</a></li>
+            <button id="normalindexwdwback">Back to index</button>
+        </div>
+
+        <script>
+            document.getElementById("urls").addEventListener("click", function(){
+               document.querySelector(".menu").style.display = "none";
+               document.getElementById("urlswdw").style.display = "block"; 
+            });
+            document.getElementById("urlswdwback").addEventListener("click", function(){
+                document.getElementById("urlswdw").style.display = "none";
+                document.querySelector(".menu").style.display = "block";
+            });
+            document.getElementById("mark").addEventListener("click", function(){
+               document.querySelector(".menu").style.display = "none";
+               document.getElementById("markwdw").style.display = "block"; 
+            });
+            document.getElementById("markwdwback").addEventListener("click", function(){
+                document.getElementById("markwdw").style.display = "none";
+                document.querySelector(".menu").style.display = "block";
+            });
+            document.getElementById("listofall").addEventListener("click", function(){
+               document.querySelector(".menu").style.display = "none";
+               document.getElementById("listofallwdw").style.display = "block"; 
+            });
+            document.getElementById("listofallwdwback").addEventListener("click", function(){
+                document.getElementById("listofallwdw").style.display = "none";
+                document.querySelector(".menu").style.display = "block";
+            });
+            document.getElementById("listofx").addEventListener("click", function(){
+               document.querySelector(".menu").style.display = "none";
+               document.getElementById("listofxwdw").style.display = "block"; 
+            });
+            document.getElementById("listofxwdwback").addEventListener("click", function(){
+                document.getElementById("listofxwdw").style.display = "none";
+                document.querySelector(".menu").style.display = "block";
+            });
+            document.getElementById("normalindex").addEventListener("click", function(){
+               document.querySelector(".menu").style.display = "none";
+               document.getElementById("normalindexwdw").style.display = "block"; 
+            });
+            document.getElementById("normalindexwdwback").addEventListener("click", function(){
+                document.getElementById("normalindexwdw").style.display = "none";
+                document.querySelector(".menu").style.display = "block";
+            });
+        </script>
+    </body>
+</html>
